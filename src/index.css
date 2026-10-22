@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Dancing Script', ui-serif, Georgia, serif;
+
+  --color-ink: #1e293b;
+  --color-ink-soft: #334155;
+  --color-cream: #fdfbf7;
+  --color-rose-brand: #c27d88;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-ink);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .orbit-node {
+    animation-name: jf-orbit;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    will-change: transform;
+  }
+
+  .orbit-node__label {
+    animation-name: jf-orbit-counter;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    will-change: transform;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: jf-float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes jf-orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(var(--orbit-angle))
+      translateY(calc(var(--orbit-radius) * -1));
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(calc(var(--orbit-angle) + 360deg))
+      translateY(calc(var(--orbit-radius) * -1));
+  }
+}
+
+@keyframes jf-orbit-counter {
+  from {
+    transform: rotate(calc(var(--orbit-angle) * -1));
+  }
+  to {
+    transform: rotate(calc(var(--orbit-angle) * -1 - 360deg));
+  }
+}
+
+@keyframes jf-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
