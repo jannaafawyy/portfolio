@@ -8,7 +8,7 @@ const certifications = [
     score: 'Score: 95%',
     description: 'Intensive full-stack training program covering MongoDB, Express.js, Angular, and Node.js with hands-on projects.',
     hours: '120 Hours (90 Technical, 30 Freelance) • Grade: 95%',
-    image: '/nti-cert-1.svg',
+    image: './nti-cert-1.svg',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const certifications = [
     score: 'Security Certified',
     description: 'Specialized cybersecurity track focusing on web vulnerability assessment, security audits, and threat mitigation.',
     hours: '72 Hours • Vulnerability Assessment & Web Security',
-    image: '/egcert-cert.svg',
+    image: './egcert-cert.svg',
   },
 ]
 

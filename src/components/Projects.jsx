@@ -6,7 +6,7 @@ const projects = [
     title: 'ParkSmart — Smart Parking...',
     desc: 'An end-to-end intelligent parking reservation system built with a multidisciplinary engineering team.',
     tags: ['Full-Stack', 'React / Angular', 'Node.js', '+3'],
-    image: '/project-parksmart.svg',
+    image: './project-parksmart.svg',
     link: site.links.githubRepos
   },
   {
@@ -14,7 +14,7 @@ const projects = [
     title: 'Dream Home — Modern Interior...',
     desc: 'A responsive interior and home aesthetics web platform. Janna\'s foundational front-end project.',
     tags: ['HTML5', 'CSS3', 'JavaScript ES6', '+2'],
-    image: '/project-dreamhome.svg',
+    image: './project-dreamhome.svg',
     link: site.links.githubRepos
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     title: 'Creative Orbital Portfolio',
     desc: 'Personal interactive portfolio engineering showcase built with React 19, Tailwind CSS v4, and Vite.',
     tags: ['React 19', 'Tailwind CSS v4', 'Vite', '+2'],
-    image: '/project-portfolio.svg',
+    image: './project-portfolio.svg',
     link: site.links.githubRepos
   }
 ];
