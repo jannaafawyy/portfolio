@@ -1,5 +1,6 @@
 import { site } from '../assets/data/siteData';
 import dreamHomeShot from '../assets/profile-hero.jpeg';
+import parkSmartShot from '../assets/parksmart.jpeg';
 
 const projects = [
   {
@@ -7,7 +8,7 @@ const projects = [
     title: 'ParkSmart — Smart Parking...',
     desc: 'An end-to-end intelligent parking reservation system built with a multidisciplinary engineering team.',
     tags: ['Full-Stack', 'React / Angular', 'Node.js', '+3'],
-    image: './project-parksmart.svg',
+    image: parkSmartShot,
     link: site.links.githubRepos
   },
   {
@@ -57,7 +58,7 @@ const Projects = () => {
             title="Open on GitHub"
             className="bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group">
             <div className="relative h-48 overflow-hidden bg-gray-100">
-              <img src={proj.image} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={proj.image} alt={proj.title} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
               <span className="absolute top-3 left-3 bg-[#1E293B] text-white text-[10px] px-3 py-1 rounded-full font-semibold">
                 {proj.badge}
               </span>
