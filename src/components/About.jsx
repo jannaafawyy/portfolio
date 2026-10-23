@@ -1,5 +1,7 @@
 import React from 'react'
 
+import profileWide from '../assets/profile-hero.jpeg'
+
 const journey = [
   {
     title: 'The foundation',
@@ -52,16 +54,24 @@ const About = () => {
       </div>
 
       <div className="bg-white p-8 md:p-12 rounded-3xl border border-gray-200 shadow-sm">
-        <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-8">
-          I'm{' '}
-          <span className="text-indigo-950 font-semibold">Janna Fawy</span>, a
-          Computer Science student at{' '}
-          <span className="text-indigo-950 font-semibold">
-            South Valley National University
-          </span>{' '}
-          in Qena, Egypt. My passion lies in crafting high-quality software that
-          bridges technical rigor with thoughtful, human design.
-        </p>
+        <div className="flex flex-col sm:flex-row gap-6 sm:items-center mb-8">
+          <img
+            src={profileWide}
+            alt="Janna Fawy"
+            loading="lazy"
+            className="w-full sm:w-52 h-36 sm:h-40 object-cover rounded-2xl border-4 border-white shadow-md shrink-0"
+          />
+          <p className="text-sm md:text-base leading-relaxed text-gray-700">
+            I'm{' '}
+            <span className="text-indigo-950 font-semibold">Janna Fawy</span>, a
+            Computer Science student at{' '}
+            <span className="text-indigo-950 font-semibold">
+              South Valley National University
+            </span>{' '}
+            in Qena, Egypt. My passion lies in crafting high-quality software that
+            bridges technical rigor with thoughtful, human design.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {journey.map((item) => (

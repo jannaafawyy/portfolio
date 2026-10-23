@@ -1,5 +1,8 @@
 import React from 'react'
 
+import certMean from '../assets/cert-mean.png'
+import certCyber from '../assets/cert-cyber.png'
+
 const certifications = [
   {
     id: 1,
@@ -8,7 +11,7 @@ const certifications = [
     score: 'Score: 95%',
     description: 'Intensive full-stack training program covering MongoDB, Express.js, Angular, and Node.js with hands-on projects.',
     hours: '120 Hours (90 Technical, 30 Freelance) • Grade: 95%',
-    image: './nti-cert-1.svg',
+    image: certMean,
   },
   {
     id: 2,
@@ -17,7 +20,7 @@ const certifications = [
     score: 'Security Certified',
     description: 'Specialized cybersecurity track focusing on web vulnerability assessment, security audits, and threat mitigation.',
     hours: '72 Hours • Vulnerability Assessment & Web Security',
-    image: './egcert-cert.svg',
+    image: certCyber,
   },
 ]
 
@@ -68,11 +71,12 @@ const Certifications = () => {
             key={cert.id}
             className="bg-white rounded-3xl border border-gray-200 shadow-sm overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
           >
-            <div className="relative h-44 overflow-hidden bg-gray-100">
+            <div className="relative h-52 md:h-60 overflow-hidden bg-slate-50 border-b border-gray-100">
               <img
                 src={cert.image}
-                alt={cert.title}
-                className="w-full h-full object-cover"
+                alt={`${cert.title} certificate — ${cert.issuer}`}
+                loading="lazy"
+                className="w-full h-full object-contain p-2"
               />
               <span className="absolute top-3 left-3 bg-[#1E293B] text-white text-[10px] px-3 py-1 rounded-full font-bold">
                 {cert.score}
