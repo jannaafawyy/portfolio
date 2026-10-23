@@ -1,4 +1,5 @@
 import { site } from '../assets/data/siteData';
+import dreamHomeShot from '../assets/profile-hero.jpeg';
 
 const projects = [
   {
@@ -14,7 +15,7 @@ const projects = [
     title: 'Dream Home — Modern Interior...',
     desc: 'A responsive interior and home aesthetics web platform. Janna\'s foundational front-end project.',
     tags: ['HTML5', 'CSS3', 'JavaScript ES6', '+2'],
-    image: './project-dreamhome.svg',
+    image: dreamHomeShot,
     link: site.links.githubRepos
   },
   {
