@@ -1,31 +1,31 @@
-import { site } from '../assets/data/siteData';
-import dreamHomeShot from '../assets/profile-hero.jpeg';
 import parkSmartShot from '../assets/parksmart.jpeg';
+import manzlyShot from '../assets/profile-hero.jpeg';
+import portfolioShot from '../assets/profile.jpg';
 
 const projects = [
   {
     badge: 'Full-Stack (Team Project)',
     title: 'ParkSmart — Smart Parking...',
     desc: 'An end-to-end intelligent parking reservation system built with a multidisciplinary engineering team.',
-    tags: ['Full-Stack', 'React / Angular', 'Node.js', '+3'],
+    tags: ['Full-Stack', ' Angular', 'Node.js', 'MongoDB'],
     image: parkSmartShot,
-    link: site.links.githubRepos
+   
   },
   {
     badge: 'Frontend Foundation',
-    title: 'Dream Home — Modern Interior...',
+    title: 'Manzly — Modern Interior...',
     desc: 'A responsive interior and home aesthetics web platform. Janna\'s foundational front-end project.',
-    tags: ['HTML5', 'CSS3', 'JavaScript ES6', '+2'],
-    image: dreamHomeShot,
-    link: site.links.githubRepos
+    tags: ['HTML5', 'CSS3', 'JavaScript ES6'],
+    image: manzlyShot,
+    
   },
   {
     badge: 'Interactive Frontend',
     title: 'Creative Orbital Portfolio',
     desc: 'Personal interactive portfolio engineering showcase built with React 19, Tailwind CSS v4, and Vite.',
-    tags: ['React 19', 'Tailwind CSS v4', 'Vite', '+2'],
-    image: './project-portfolio.svg',
-    link: site.links.githubRepos
+    tags: ['React 19', 'Tailwind CSS v4', 'Vite'],
+    image: portfolioShot,
+    
   }
 ];
 
@@ -89,7 +89,6 @@ const Projects = () => {
 
       <div className="flex justify-center mt-10">
         <a
-          href={site.links.githubRepos}
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 bg-[#1E293B] text-white text-xs font-bold px-6 py-3 rounded-full hover:bg-slate-800 transition-colors shadow-md"
